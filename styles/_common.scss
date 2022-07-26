@@ -1,0 +1,29 @@
+* {
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    color: rgba(0, 0, 0, 1);
+}
+
+body {
+    font-family: 'Graphik LCG';
+    position: relative;
+}
+
+.nav-container {
+    max-width: 1298px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.accelerate__container {
+    max-width: 1258px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.container {
+    max-width: 1250px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
