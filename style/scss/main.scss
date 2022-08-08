@@ -128,14 +128,13 @@ $lg: 1200px;
 .accelerate {
     @extend %flex-box;
     align-items: flex-end;
-    justify-content: normal;
     padding-top: 129px;
     padding-bottom: 182px;
     &__content {
         display: flex;
         flex-direction: column;
         flex-wrap: wrap;
-        max-width: 539px;
+        width: 45%
     }
     &__h1 {
         @include font-settings (600, 65px, 70px);
@@ -153,7 +152,7 @@ $lg: 1200px;
         @include font-settings (400, 15px, 25px);
     }
     &__img {
-        max-width: 678px;
+        width: 55%;
         overflow: hidden;
     }
 }
@@ -206,7 +205,7 @@ $lg: 1200px;
         display: flex;
         flex-direction: column;
         gap: 30px;
-        max-width: 520px;
+        width: 42%
     }
     &__name {
         @include font-settings (600, 50px, 60px);
@@ -232,6 +231,7 @@ $lg: 1200px;
     }
     &__image {
         max-width: 632px;
+        // width: 50%;
         overflow: hidden;
         transition: 0.6s;
         &:hover {
@@ -294,8 +294,11 @@ $lg: 1200px;
         gap: 20px;
     }
 }
-.destination-work {
-        max-width: 390px;  
+.destination-work { 
+        flex: 0 0 auto;
+        width: 33.3333333333%;
+        padding: 10px;
+        margin: -10px;
     &__img {
         padding-bottom: 49px;
     }
@@ -415,7 +418,7 @@ $lg: 1200px;
     &__content {
         @extend %flex-box;
         align-items: flex-start;
-        justify-content: space-between;
+        
         padding: 92px 0 95px 0;
         border-bottom: 1px solid rgba(0, 0, 0, 1);
     }
@@ -438,9 +441,15 @@ $lg: 1200px;
         font-weight: 600;
     }
 }
-            
+      
+.list-wrap {
+    @extend %flex-box;
+    align-items: baseline;
+    width: 67%;
+}
         
 .content-list {
+    width: 25%;
     &__name {
         @include font-settings (600, 20px, 25px); 
         padding-bottom: 21px;
@@ -489,9 +498,78 @@ $lg: 1200px;
             flex: 0 0 auto;
             width: $grid-col-size*$i;
             padding: $grid-col-guter;
+            margin: -10px;
         }
     }
+    .navigation {
+        &__links {
+            justify-content: space-evenly;
+            gap: 10px;
+        }
+        &__buttons {
+            margin: 0 auto;
+        }
+        &__list {
+            gap: 5px 10px;
+            padding: 10px 0;
+        }
+    }
+    .accelerate {
+        text-align: center;
+        padding: 40px 0;
+        &__content {
+            padding-bottom: 20px;
+        }
+        &__text {
+            margin: 0 auto;
+        }
+        &__img {
+            padding: 0 20px;
+        }
+    }
+    .companies {
+        padding: 30px 0;
+        &__logo {
+            justify-content: space-evenly;
+        }
+    }
+    .destination {
+        padding: 40px 0;
+        &__description {
+            text-align: center;
+        }
+    }
+    .destination-work {
+        text-align: center;
+        padding: 20px 20px;
+    }   
+    .revolt_wrap {
+        padding: 30px 0;
+    }
+    .revolt {
+        &__officer {
+            margin: 0 auto;
+            border-radius: 50%;
+        }
+        &__text {
+            min-width: 100%;
+        }
+    }
+    .item {
+        flex-direction: column;
+        padding: 40px 0;
+    }
+    .software {
+        justify-content: space-evenly;
+    }
+    .integrate, .localisation {
+        padding: 40px 0;
+    }
+    .list-wrap {
+        width: 100%;
+    }
 }
+
 
 @media all and (max-width: $md) {
     @for $i from 1 through $grid-col-count {
@@ -501,8 +579,18 @@ $lg: 1200px;
             padding: $grid-col-guter;
         }
     }
-    .navigation__buttons {
-        margin: 0 auto;
+    .navigation {
+        &__links {
+            justify-content: space-around;
+            gap: 20px;
+        }
+        &__buttons {
+            margin: 0 auto;
+        }
+        &__list {
+            gap: 5px 10px;
+            padding: 10px 0;
+        }
     }
     .accelerate {
         padding: 70px 10px;
@@ -568,12 +656,19 @@ $lg: 1200px;
             padding: $grid-col-guter;
         }
     }
-    .navigation__buttons {
-        margin: 0 auto;
+    .navigation {
+        &__links {
+            justify-content: space-around;
+        }
+        &__buttons {
+            margin: 0 auto;
+        }
+        &__list {
+            gap: 5px 10px;
+            padding: 10px 0;
+        }
     }
-    .navigation__list {
-        gap: 0 10px;
-    }
+    
     .accelerate {
         padding-top: 20px;
         padding-bottom: 20px;
